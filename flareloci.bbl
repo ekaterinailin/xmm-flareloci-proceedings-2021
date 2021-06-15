@@ -1,0 +1,208 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bettonvil%
+, Sutterlin%
+, Hammerschlag%
+, Rutten%
+\BCBL {}\ \BBA {} Stix%
+}{%
+Bettonvil%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+Bettonvil2003}
+\APACinsertmetastar {%
+Bettonvil2003}%
+\begin{APACrefauthors}%
+Bettonvil, F\BPBI C.%
+, Sutterlin, P.%
+, Hammerschlag, R\BPBI H.%
+, Rutten, R\BPBI J.%
+\BCBL {}\ \BBA {} Stix, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{},
+\newblock
+{\BBOQ}\APACrefatitle {Proc. SPIE Conf. Ser.} {Proc. SPIE Conf. Ser.}{\BBCQ}
+\newblock
+\BIn{} \BVOL\ 4853, \BPG~306.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bland-Hawthorn%
+, van Breugel%
+\BCBL {}\ \BBA {} Gillingham%
+}{%
+Bland-Hawthorn%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2001}}%
+}]{%
+Bland2001}
+\APACinsertmetastar {%
+Bland2001}%
+\begin{APACrefauthors}%
+Bland-Hawthorn, J.%
+, van Breugel, W.%
+\BCBL {}\ \BBA {} Gillingham, P\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{}{},
+\newblock
+\unskip
+\newblock
+\APACjournalVolNumPages{ApJ}{563}{}{611}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kosugi%
+\ \BBA {} Gillingham%
+}{%
+Kosugi%
+\ \BBA {} Gillingham%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+Kosugi2007}
+\APACinsertmetastar {%
+Kosugi2007}%
+\begin{APACrefauthors}%
+Kosugi, T.%
+\BCBT {}\ \BBA {} Gillingham, R\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{},
+\newblock
+\unskip
+\newblock
+\APACjournalVolNumPages{Sol. Phys.}{243}{}{3}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kosugi%
+\ \protect \BOthers {.}}{%
+Kosugi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+Kosugi2009}
+\APACinsertmetastar {%
+Kosugi2009}%
+\begin{APACrefauthors}%
+Kosugi, T.%
+, Matsuzaki, K.%
+, Sakao, R.%
+, Bettonvil, F\BPBI C.%
+, Sutterlin, P.%
+\BCBL {}\ \BBA {} Hammerschlag, R\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{},
+\newblock
+\unskip
+\newblock
+\APACjournalVolNumPages{Sol. Phys.}{243}{}{3}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Power%
+\ \protect \BOthers {.}}{%
+Power%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1975}}%
+}]{%
+Paivio1975}
+\APACinsertmetastar {%
+Paivio1975}%
+\begin{APACrefauthors}%
+Power, J\BPBI D.%
+, Cohen, A\BPBI L.%
+, Nelson, S\BPBI M.%
+\ et al.\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{},
+\newblock
+\unskip
+\newblock
+\APACjournalVolNumPages{Cognition}{37}{2}{635}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rutten%
+}{%
+Rutten%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+Rutten2007}
+\APACinsertmetastar {%
+Rutten2007}%
+\begin{APACrefauthors}%
+Rutten, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{},
+\newblock
+{\BBOQ}\APACrefatitle {The Physics of Chromospheric Plasmas} {The Physics of
+  Chromospheric Plasmas}.{\BBCQ}
+\newblock
+\BIn{} P.~Heinzel, I.~Dorotovic\BCBL {}\ \BBA {} R\BPBI J.~Rutten\ (\BEDS),
+  \APACrefbtitle {ASP Conf. Ser.} {ASP Conf. Ser.}\ \BVOL~368, \BPG~27.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Stix%
+}{%
+Stix%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+Stix2004}
+\APACinsertmetastar {%
+Stix2004}%
+\begin{APACrefauthors}%
+Stix, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2004},
+\newblock
+\APACrefbtitle {Astronomy and Astrophysics Library} {Astronomy and Astrophysics
+  Library}\ (\PrintOrdinal{2}\ \BEd).
+\newblock
+\APACaddressPublisher{Berlin}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Strunk Jr.}%
+\ \BBA {} White%
+}{%
+{Strunk Jr.}%
+\ \BBA {} White%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+Strunk1979}
+\APACinsertmetastar {%
+Strunk1979}%
+\begin{APACrefauthors}%
+{Strunk Jr.}, W.%
+\BCBT {}\ \BBA {} White, E\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1979},
+\newblock
+\APACrefbtitle {The Elements of Style} {The Elements of Style}\
+  (\PrintOrdinal{3}\ \BEd).
+\newblock
+\APACaddressPublisher{New York}{MacMillan}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
