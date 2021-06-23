@@ -2251,7 +2251,7 @@ Volume\ \@jvol, Article ID\ \@artid, \thepage~pages\par%
 \vspace*{-0pt}
 }
 
-\bibliographystyle{Wiley-ASNA}%
+\bibliographystyle{flareloci}%
 
 %
 %% Macros for Scheme %%

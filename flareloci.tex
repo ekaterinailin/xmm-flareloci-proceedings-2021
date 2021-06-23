@@ -2,407 +2,184 @@
 
 \articletype{Article Type}%
 
-\received{26 April 2016}
-\revised{6 June 2016}
-\accepted{6 June 2016}
+\received{XXXX}
+\revised{XXXX}
+\accepted{XXXX}
 
 \raggedbottom
 
 \begin{document}
 
-\title{This is the sample article title\protect\thanks{This is an example for title footnote.}}
+\title{Localizing flares to understand stellar magnetic fields and space weather in exo-systems}
 
-\author[1]{Author One*}
+\author[1,2]{Ekaterina Ilin*}
 
-\author[2,3]{Author Two}
+\author[1,2]{Katja Poppenh\"ager}
 
-\author[3]{Author Three}
+% \author[3]{Author Three}
 
-\authormark{AUTHOR ONE \textsc{et al}}
+\authormark{ILIN \textsc{et al}}
 
+\address[1]{\orgname{Leibniz-Institute for Astrophysics Potsdam (AIP)}, \orgaddress{An der Sternwarte 16, \country{germany}}}
+\address[2]{\orgdiv{Institute for Physics and Astronomy}, \orgname{University of Potsdam}, \orgaddress{Karl-Liebknecht-Str. 24/25, 14476 Potsdam \country{Germany}}}
 
-\address[1]{\orgdiv{Org Division}, \orgname{Org Name}, \orgaddress{\state{State name}, \country{Country name}}}
+% \address[3]{\orgdiv{Org Division}, \orgname{Org Name}, \orgaddress{\state{State name}, \country{Country name}}}
 
-\address[2]{\orgdiv{Org Division}, \orgname{Org Name}, \orgaddress{\state{State name}, \country{Country name}}}
+\corres{*\email{eilin@aip.de}}
 
-\address[3]{\orgdiv{Org Division}, \orgname{Org Name}, \orgaddress{\state{State name}, \country{Country name}}}
+% \presentaddress{This is sample for present address text this is sample for present address text}
 
-\corres{*Corresponding author name, This is sample corresponding address. \email{authorone@gmail.com}}
+\abstract{Stars are only spherically symmetrical to first order. The way in which stellar rotation and magnetism break this symmetry puts important observational constraints on stellar magnetic fields, and factor in the assessment of the impact of stellar activity on exoplanet atmospheres.
 
-\presentaddress{This is sample for present address text this is sample for present address text}
+The spatial distribution of flares on the solar surface is well known to be non-uniform, but elusive on other stars. We briefly review the techniques available to recover the loci of stellar flares, and highlight a new method that enables systematic flare localization directly from optical light curves.
 
-\abstract{This is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text this is sample abstract text .}
+We provide an estimate of the number of flares we may be able to localize with the Transiting Exoplanet Survey Satellite (TESS), and show that it is consistent with the first results obtained from the first full sky scan of the mission. We suggest that non-uniform flare latitude distributions need to be taken into account in accurate assessments of exoplanet habitability. }
 
-\keywords{keyword1, keyword2, keyword3, keyword4}
-
-\jnlcitation{\cname{%
-\author{Williams K.}, 
-\author{B. Hoskins}, 
-\author{R. Lee}, 
-\author{G. Masato}, and 
-\author{T. Woollings}} (\cyear{2016}), 
-\ctitle{A regime analysis of Atlantic winter jet variability applied to evaluate HadGEM3-GC2}, \cjournal{Q.J.R. Meteorol. Soc.}, \cvol{2017;00:1--6}.}
+\keywords{stars: activity, stars: flare, stars: magnetic fields, methods: data analysis}
 
 %%\fundingInfo{Funding info text.}
 
 \maketitle
 
-\footnotetext{\textbf{Abbreviations:} ANA, anti-nuclear antibodies; APC, antigen-presenting cells; IRF, interferon regulatory factor}
+% \footnotetext{\textbf{Abbreviations:} ANA, anti-nuclear antibodies; APC, antigen-presenting cells; IRF, interferon regulatory factor}
 
 
-\section{Sample for first level head}\label{sec1}
+\section{Introduction}\label{sec:intro}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit~\citet{Kosugi2007} Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
-felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
-vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Mauris ut leo. Cras viverra metus rhoncus sem. 
+Flares are magnetic explosions that occur in the atmospheres of all stars that possess an outer convection zone. They are high-energy phenomena, during which magnetic re-connection triggers an eruptive energy release in form of electromagnetic radiation from radio bands, through optical and UV to soft and hard X-ray emission, each with a characteristic time evolution. These general features are shared by flares observed on most stars from the Sun, solar analogs down to fully convective dwarfs, and from pre-main sequence to solar age. In our interpretation of stellar flare observations we therefore often extrapolate from our knowledge of the Sun.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit~\citet{Kosugi2007} Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
-felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
-vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Mauris ut leo. Cras viverra metus rhoncus sem. 
+On the Sun, flares occur in the vicinity of sunspots in a belt around the solar equator, and almost never above $30^\circ$ latitude. However, the discovery of polar spots on young sun-like and low mass stars broke the analogy between the solar and stellar situations. Where flares occur on the surfaces of stars is an open question. 
 
-\section{Sample for another first level head}\label{sec2}
+Locating flaring regions and coronal loops on the surfaces of stars has so far been possible only in lucky cases, where flares occurred during spectropolarimetric observations, or during eclipses of a binary star. 
 
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra
-fermentum felis. Proin fermentum massa ac
-quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo~\cite{Bland2001} Maecenas lacinia. Nam ipsum ligula, eleifend
-at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
+The latter occurred in the Algol binary system, where a large X-ray flare on Algol B was occulted by the primary star, and revealed that the emission originated from the south pole of the secondary~\citep{schmitt1999}. Later, \citet{peterson2010} used multi-epoch radio imaging to identify a large, quasi-stable, pole-oriented coronal loop structure anchored to Algol B. 
 
-Example for bibliography citations cite~\citep{Kosugi2009}, cites~\cite{Stix2004}
+In another lucky case, \citet{wolter2008} could use the Doppler Imaging (DI) technique on the Ca II K line to localize an active region around $56\pm10$ deg latitude in the chromosphere that happened to flare during the observations on the K2 star BO Mic. The flare lasted for 4 h, and appeared at the fringes of large spot structures that had also been recovered with DI.
 
-Quisque ullamcorper placerat ipsum. Cras nibh~\cite{Kosugi2009,Stix2004} Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
-Nunc elementum fermentum wisi. 
-\begin{eqnarray}
-s(nT_{s}) &= &s(t)\times \sum\limits_{n=0}^{N-1} \delta (t-nT_{s}) \xleftrightarrow{\mathrm{DFT}}  S \left(\frac{m}{NT_{s}}\right) \nonumber\\
-&= &\frac{1}{N} \sum\limits_{n=0}^{N-1} \sum\limits_{k=-N/2}^{N/2-1} s_{k} e^{\mathrm{j}2\pi k\Delta fnT_{s}} e^{-j\frac{2\pi}{N}mn}
-\end{eqnarray}
-Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-venenatis arcu wisi vel Vestibulum diam. 
+More recently, \citet{berdyugina2017} reconstructed a magnetic field loop that erupted in flare-like bursts on a late M dwarf using spectropolarimetry. Because the inclination of the stellar rotation axis of this star was not well-constrained, they could not pin down what latitudes the loop occupied but recovered its topology regardless.
 
+The serendipity of these discoveries is due to the randomness of flare occurrence times, and the rarity of sufficiently long, large flares to which the analysis techniques were sensitive. 
 
-\begin{figure*}[t]
-\centerline{\includegraphics[width=342pt,height=9pc,draft]{empty}}
-\caption{This is the sample figure caption.\label{fig1}}
-\end{figure*}
+In these proceedings, we briefly review the methods available to infer the loci of flares on the stellar surface in Section~\ref{sec:howto}, where we highlight a new direct method for systematic localization and estimate the number of flares suited for this technique. In Section~\ref{sec:implications}, we discuss how flare loci help us understand the nature of stellar magnetic fields ~(Section~\ref{sec:mf}), and outline the implications for exoplanetary space weather~(Section~\ref{sec:planets}). We conclude with a short summary in Section~\ref{sec:summary}.
 
-Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non
-odio. Morbi ut dui.  
+\section{How to localize flares on the stellar surface}
+\label{sec:howto}
 
-\subsection{Example for second level head}
+\subsection{Indirectly via Doppler Imaging and Zeeman Doppler Imaging }
+Doppler Imaging~\citep{deutsch1958, goncharskii1977} and Zeeman Doppler Imaging~\citep{semel1989, donati1989} of stellar magnetic fields have been successfully used to map stellar spot structure and global magnetic field configuration in FGKM dwarfs~\citep{strassmeier2002,morin2008,morin2010,see2019}.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit, dictum
-in, hendrerit sit amet, egestas sed, leo. 
+Although spot size generally correlates with flare size~\citep{maehara2017}, flares do not correlate directly with rotational phase in stars that show activity (i.e., dark spot or bright region) induced rotational variability~\citep{doyle2019}. So it is not clear where flares occur on these active stars, although we know that on the Sun, flares occur in the vicinity of spots, and more energetic flares occur in the more complex spot groups~\citep{sammis2000}. 
 
-Morbi luctus, wisi viverra faucibus pretium, nibh est placerat odio, nec commodo wisi enim eget quam. Quisque
-libero justo, consectetuer a, feugiat vitae, porttitor eu, libero. Suspendisse sed mauris vitae elit sollicitudin malesuada.
+\citet{berdyugina2017} and \citet{wolter2008} used ZDI and DI to more directly recover coronal loops and emission loci, respectively, from flares that occurred during their observation campaigns. However, these methods would require prohibitively expensive long-term spectroscopic monitoring to capture flares on purpose.
+%- Ref to: \citep{berdyugina2017, wolter2008}
 
-\begin{quote}
-This is an example~\citep{Bettonvil2003,Rutten2007} for quote text. This is an example for quote text. This is an example for quote text. This is an example for quote text~\cite{Rutten2007}. This is an example for quote text. This is an example for quote text. This is an example for quote text~\cite{Rutten2007}. This is an example for quote text. This is an example for quote text. This is an example for quote text. 
-\end{quote}
+\subsection{Indirectly via asteroseismology and light curve inversion}
 
-\section{Sample for next first level head}\label{sec3}
+Using solely activity-driven perturbations in asteroseismic observations can in theory reveal the latitudes of active regions~\citep{gizon2002, papini2015, papini2019}. The method poses that strong magnetic field clusters disturb asteroseismic oscillations that then become visible as characteristic shifts in the power spectrum that trace the location of the clusters.
 
-\subsection{Example for another second level head}
+\citep{berdyugina2005} suggested an alternative approach that combines asteroseismic information on the differential rotation profile of a star with spot-induced variability obtained from time series photometry. It proved more feasible than the asteroseismology-only technique, leading to the first multi-epoch spot latitude survey, that enabled time resolved spot latitude mapping on a sun-like star, which is known as butterfly diagram in the solar case~\citep{benomar2018, bazot2018}.
 
-Suspendisse vitae elit. Aliquam arcu neque, ornare in, ullamcorper quis, commodo eu, libero. Fusce sagittis erat at
-erat tristique mollis. Maecenas sapien libero, molestie et, lobortis in, sodales eget, dui. 
+If an eclipsing body is present in the system, comparing the stellar light curve of the active star in and out of eclipse at the same rotational phases provides information about the structures covered by the eclipsing body. In systems with low obliquity of the transiting body, a narrow strip in latitude can be resolved in addition to the longitudes~\citep{huber2009,huber2010}; in sufficiently misaligned system, even butterfly diagrams can be recovered~\citep{netto2020}. 
 
-Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque
-augue sed urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id, sapien. 
+Although flare localization is in principle possible with these methods and may be less expensive that Z(DI) because it relies purely on light curve observations, all three methods are better suited to recover more stable magnetically active structures like starspots, which provide only indirect information about flare location.
 
-\subsection{Second level head text}
-
-Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
-eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
-facilisis magna. 
-
-\subsubsection{Third level head text}
-
-Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra tortor. Sed fringilla
-justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue est scelerisque
-sapien, venenatis congue nulla arcu et pede. 
-
-Etiam ac leo a risus tristique nonummy. Donec dignissim tincidunt nulla. Vestibulum rhoncus molestie odio. Sed
-lobortis, justo et pretium lobortis, mauris turpis condimentum augue, nec ultricies nibh arcu pretium enim. 
+\subsection{Directly from optical light curves}
+\label{sec:systematic}
+With the launch of Kepler~\citep{borucki2010} and the Transiting Exoplanet Survey Satellite~\citep[TESS,][]{ricker2015}, systematic flare monitoring has become feasible for hundreds of thousands of stars. Ilin+2021 used TESS data from the first full sky scan of the mission to systematically search for rapidly rotating, fully convective stars, and found flares that could be located directly using the optical light curve of the star. 
+They recovered four flares that lasted longer than a full rotation period on fully convective M dwarfs.
+These flares' light curves were modulated as the flaring region rotated in and out of view on the fast spinning stellar surface.
+They found that all their flares occurred at latitudes closer to the rotational poles of their respective stars than to the equator.
+Except for an independent measurement of the inclination of the stellar rotation axis, which was required determine the latitude of the flaring region, the light curve contained all necessary information to fully determine the location of the flare on the stellar surface.
+As TESS, and soon PLATO~\citep{rauer2014}, will continue the high-cadence monitoring of flaring stars, this method can be applied to a steadily growing high quality data set.
 
 
-\begin{boxtext}
-\section*{Example of Boxtext}%
-This is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext.
-\end{boxtext}
 
-
-\paragraph{Fourth level head text}
-
-Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque
-augue sed urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id, sapien. 
-
-Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
-eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
-facilisis magna. 
-
-\subparagraph{Fifth level head text}
-
-Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra
-tortor. Sed fringilla justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue
-est scelerisque sapien, venenatis congue nulla arcu et pede. Ut suscipit enim vel sapien. 
-
-Nulla in ipsum. Praesent eros nulla, congue vitae, euismod ut, commodo a, wisi. Pellentesque habitant morbi
-tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy magna non leo. 
-
-Nulla in ipsum. Praesent eros nulla, congue vitae, euismod ut, commodo a, wisi. Pellentesque habitant morbi
-tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy magna non leo. 
-
-\begin{figure}[t]
-	\centerline{\includegraphics[width=78mm,height=9pc,draft]{empty}}
-	\caption{This is the sample figure caption.\label{fig2}}
+\begin{figure}
+    \centering
+    \includegraphics[width=\hsize]{guenther_repr_fwhm_freq.png}
+    \caption{Flare frequency above $E_{bol}$ in flare stars with flares with measured $FWHM$. Note that the frequencies are for individual flaring stars that were detected as flaring within the first two Sectors of TESS Cycle 1 by~\citet{guenther2020}. Stars that flare but did not show any flares within the two first Sectors are not included.}
+    \label{fig:guenther}
 \end{figure}
 
+\subsubsection{How many localizable flares will TESS observe?}
+The method presented in Ilin+2021 requires the star to rotate rapidly, and flare actively, so that there is a possibility for an event than spans more than a full rotation period to occur. 
+Rapid rotation and flaring activity are strongly correlated in stars with an outer convection zone (or fully convective stars) because rotation powers the stellar dynamo that produces a dynamic magnetic field that generates flares.
+Flares that last longer than 12 h are uncommon but not exceedingly rare.
+Based on the TESS sample of fully convective dwarfs, Ilin+2021 estimate that flares suited for localization analysis occur once every 120 years per star. This number will be lower for earlier type stars because they spin down faster, and lose their flaring activity at earlier ages, too~\citep{kowalski2009,hilton2010,chang2015,ilin2019,ilin2021}.
+The flares in Ilin+2021 had TESS band energies around $10^{34}$ erg  and $FWHM$ of about $1-1.5$ h. 
+Depending on the spectral type, at $FWHM > 1$ h, flare energies range between $\sim 10^{33}-10^{37}$ erg. Earlier type stars tend to have higher flare energies at similar $FWHM$~\citep{guenther2020}.
 
-\begin{center}
-\begin{table*}[t]%
-\caption{This is sample table caption.\label{tab1}}
-\centering
-\begin{tabular*}{500pt}{@{\extracolsep\fill}lccD{.}{.}{3}c@{\extracolsep\fill}}
-\toprule
-&\multicolumn{2}{@{}c@{}}{\textbf{Spanned heading\tnote{1}}} & \multicolumn{2}{@{}c@{}}{\textbf{Spanned heading\tnote{2}}} \\\cmidrule{2-3}\cmidrule{4-5}
-\textbf{col1 head} & \textbf{col2 head}  & \textbf{col3 head}  & \multicolumn{1}{@{}l@{}}{\textbf{col4 head}}  & \textbf{col5 head}   \\
-\midrule
-col1 text & col2 text  & col3 text  & 12.34  & col5 text\tnote{1}   \\
-col1 text & col2 text  & col3 text  & 1.62  & col5 text\tnote{2}   \\
-col1 text & col2 text  & col3 text  & 51.809  & col5 text   \\
-\bottomrule
-\end{tabular*}
-\begin{tablenotes}%%[341pt]
-\item Source: Example for table source text.
-\item[1] Example for a first table footnote.
-\item[2] Example for a second table footnote.
-\end{tablenotes}
-\end{table*}
-\end{center}
+In Fig.~\ref{fig:guenther}we show how often flares above a certain energy occur as a function of that flare's $FWHM$. Gradual flares with $FWHM > 1$ h in actively flaring stars are fewer than impulsive flares, and these flares' energies tend to be high which in turn lowers their frequencies among all flares. Using the data illustrated in Fig.~\ref{fig:guenther}, we can estimate how many flares that are suited for localization can be found in one full sky scan conducted with TESS.
 
-\begin{center}
-\begin{table}[t]%
-\centering
-\caption{This is sample table caption.\label{tab2}}%
-\tabcolsep=0pt%
-\begin{tabular*}{20pc}{@{\extracolsep\fill}lcccc@{\extracolsep\fill}}
-\toprule
-\textbf{col1 head} & \textbf{col2 head}  & \textbf{col3 head}  & \textbf{col4 head}  & \textbf{col5 head} \\
-\midrule
-col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$\dagger$}   \\
-col1 text & col2 text  & col3 text  & col4 text  & col5 text   \\
-col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$\ddagger$}   \\
-\bottomrule
-\end{tabular*}
-\begin{tablenotes}
-\item Source: Example for table source text.
-\item[$\dagger$] Example for a first table footnote.
-\item[$\ddagger$] Example for a second table footnote.
-\end{tablenotes}
-\end{table}
-\end{center}
+%Therefore, most stars that rotate quickly due to their young age or due to binary interaction are candidates for flare localization. 
+Observations of young clusters show that stars are born with a wide distribution of stellar rotation rates, which widens further during the pre-main sequence contraction phase, reaching the highest rotation rates at zero-age main sequence~\citep[ZAMS,][, and references therein]{johnstone2015,johnstone2021}.
+At Pleiades age (125 Myr, ZAMS), about $30\%$ of stars with spectral types later than F5 and earlier than M6 rotate at $P_{rot}<12$ h, $>75\%$ of which are stars in the fully convective regime~\citep{rebull2016}. 
+At Praesepe/Hyades age (600-800 Myr), the fast rotators comprise only about $6\%$ of stars in that regime, the fully convective stars still making up the majority of these~\citep{douglas2019}.
+Such fast rotators all reside in the saturated activity regime~\citep{wright2011,wright2016,wright2018,newton2017}, and thus are expected to be actively flaring~\citep{doorsselaere2017, clarke2018}.
+
+Assuming that the flaring stars in Fig.~\ref{fig:guenther} tend to be young, we can estimate that a similar fraction of these stars are rapidly rotating. For a conservative estimate we can assume $1\%$, a lower number than what we observe in the Pleiades, Praesepe and the Hyades. We can also take into account as a lower limit that about $1\%$ of solar-type stars are usually found flaring within 1 to 2 Sectors of observations~\citep{tu2021}. From Fig.~\ref{fig:guenther}, we obtain a lower order of magnitude estimate of $0.01$ flares per day with sufficiently large $FHWM$ (considering that flares in the corresponding energy range can also be more impulsive), which yields an approximate lower limit of $10^{-6}$ localizable flares per day, or one flare every $\sim2 700$ years of observations per star. This number is much lower than the estimate for the fully convective stars (one flare in 120 years), because these stars rotate faster and flare more persistently during their lifetimes than solar-type stars. However, since TESS observes $200\,000$ mostly FGKM stars per year of observations for $\sim 25$ d each, each year of TESS operations would yield at least $\sim 5$ localizable flares, which is consistent with the four flares detected by Ilin+2021 because the majority of the five are expected in the fully convective M dwarf regime based on the distribution of rotation rates. 
+
+%Historically, stellar classes named after their prototypes, BY Dra and UV Ceti fall into this category, but others like RS CVn type stars and some T Tauri stars, may not, because their rotation periods are usually too low, even though they are actively flaring. Similarly, close and contact binary systems like UW UMa and Algol stars have entirely different physics going on, and FK Com stars are flaring giant branch stars that would require very long flare durations for flare localization to work without the star rotating at breakup velocities~\citep[see][for details on stellar activity in these prototype stars]{berdyugina2005}.
+\section{Implications of non-uniform flare distributions}
+\label{sec:implications}
+In the following sections, we discuss what opportunities and new questions locating flares on otherwise difficult to spatially resolve stellar surfaces opens up both for stellar and exoplanetary research.
 
 
-Below is the example~\cite{Paivio1975} for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list.\footnote{This is an example for footnote.}:
-\begin{itemize}
-\item bulleted list entry sample bulleted list entry~\cite{Strunk1979} sample list entry text. 
-\item bulleted list entry sample bulleted list entry. bulleted list entry sample bulleted list entry. bulleted list entry sample bulleted list entry.
-\item bulleted list entry sample bulleted list entry~\cite{Paivio1975} bulleted list entry sample bulleted list entry~\citet{Rutten2007} sample list entry text.  bulleted list entry sample bulleted list entry.
-\item sample list entry text. sample list entry text.  
-\end{itemize}
+\subsection{Localize flares and active regions to understand stellar magnetic fields}\label{sec:mf}
 
-Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu
-ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum
-eu, sodales cursus, magna. 
+%\subsection{Missing link between small scale surface magnetic fields and global magnetic fields}
 
-\noindent\textbf{Description sample:}
+The connection between small scale surface and global magnetic fields of low mass stars is poorly understood. Flares, and in particular large stellar superflares, are unique probes of both because they occupy a volume that spans a wide range of atmospheric heights, and because it is highly localized on the stellar sphere. Observing a flare at a known location on the star illuminates the dynamics of the strong small-scale surface magnetic field, and in the case of large superflares, ties it to high altitudes in the corona.
 
-\begin{description}
-\item[first entry] description text. description text. description text. description text. description text. description text. description text. 
-\item[second long entry] description text. description text. description text. description text. description text. description text. description text. 
-\item[third entry] description text. description text. description text. description text. description text. 
-\item[fourth entry] description text. description text. 
-\end{description}
+The triggering re-connection event is located in the corona, the subsequent energy release penetrates all layers of the stellar atmosphere through to the photospheric footpoints. Associated particle emission in the form of coronal mass ejections (CME) and energetic particle events (EP) will inevitably interact with the large scale field, which may confine, slow down, deflect or otherwise affect what eventually leaves the star along with the high energy radiation from the flare itself, and can the arrive at the planets that revolve around it. 
 
-Below is the sample for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list:\\[12pt]
-
-\noindent\textbf{Numbered list items sample:}
-
-\begin{enumerate}[1.]
-\item First level numbered list entry. sample numbered list entry. 
-
-\item First numbered list entry. sample numbered list entry. Numbered list entry. sample numbered list entry. Numbered list entry. sample numbered list entry. 
-
-\begin{enumerate}[a.]
-\item Second level alpabetical list entry. Second level alpabetical list entry. Second level alpabetical list entry~\citet{Rutten2007} Second level alpabetical list entry. 
-
-\item Second level alpabetical list entry. Second level alpabetical list entry~\citet{Bettonvil2003,Rutten2007}.
-
-\begin{enumerate}[ii.]
-\item Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry. 
-
-\item Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry~\cite{Paivio1975}.
-\end{enumerate}
-
-\item Second level alpabetical list entry. Second level alpabetical list entry~\cite{Strunk1979}.
-\end{enumerate}
-
-\item First level numbered list entry. sample numbered list entry. Numbered list entry. sample numbered list entry. Numbered list entry. 
-
-\item Another first level numbered list entry. sample numbered list entry. Numbered list entry. sample numbered list entry. Numbered list entry. 
-\end{enumerate}
-
-\noindent\textbf{un-numbered list items sample:}
-
-\begin{enumerate}[]
-\item Sample unnumberd list text..
-\item Sample unnumberd list text.
-\item sample unnumberd list text. 
-\item Sample unnumberd list text.
-\end{enumerate}
-
-\section{Examples for enunciations}\label{sec4}
-
-\begin{theorem}[Theorem subhead]\label{thm1}
-Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
-\end{theorem}
-
-Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit. In hac habitasse platea dictumst.
-
-Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
-Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est.
-
-\begin{proposition}
-Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
-\end{proposition}
-
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. 
-
-Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit. 
-
-\begin{definition}[Definition sub head]
-Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text.
-\end{definition}
-
-Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non
-odio. Morbi ut dui.  
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
-dictum in, hendrerit sit amet, egestas sed, leo. 
-
-\begin{proof}
-Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-\end{proof}
-
-Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-vitae ornare odio metus a mi. 
-
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-viverra fermentum felis. 
-
-\begin{proof}[Proof of Theorem~\ref{thm1}]
-Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-\end{proof}
-
-\begin{algorithm}
-\caption{Pseudocode for our algorithm}\label{alg1}
-\begin{algorithmic}
-  \For each frame
-  \For water particles $f_{i}$
-  \State compute fluid flow~\cite{Strunk1979}
-  \State compute fluid--solid interaction~\cite{Paivio1975}
-  \State apply adhesion and surface tension~\cite{Rutten2007}
-  \EndFor
-   \For solid particles $s_{i}$
-   \For neighboring water particles $f_{j}$
-   \State compute virtual water film \\(see Section~\ref{sec3})
-   \EndFor
-   \EndFor
-   \For solid particles $s_{i}$
-   \For neighboring water particles $f_{j}$
-   \State compute growth direction vector \\(see Section~\ref{sec2})
-   \EndFor
-   \EndFor
-   \For solid particles $s_{i}$
-   \For neighboring water particles $f_{j}$
-   \State compute $F_{\theta}$ (see Section~\ref{sec1})
-   \State compute $CE(s_{i},f_{j})$ \\(see Section~\ref{sec3})
-   \If $CE(b_{i}, f_{j})$ $>$ glaze threshold
-   \State $j$th water particle's phase $\Leftarrow$ ICE
-   \EndIf
-   \If $CE(c_{i}, f_{j})$ $>$ icicle threshold
-   \State $j$th water particle's phase $\Leftarrow$ ICE
-   \EndIf
-   \EndFor
-   \EndFor
-  \EndFor
-\end{algorithmic}
-\end{algorithm}
-
-Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
-eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
-facilisis magna. 
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
-dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. 
+Prospectively, we can combine multi-band time series observations that reveal how different atmospheric strata are affected by a flare with measurements of its latitude and longitude to reconstruct the full three-dimensional time evolution of flares on stars other than the Sun. %Accurate models of stellar magnetic fields will have to be consistent with
+\subsection{Localize flares to understand the impact of stellar activity on habitable zone planets}\label{sec:planets}
 
 
-\begin{sidewaystable}%[h]
-\caption{Sideways table caption. For decimal alignment refer column 4 to 9 in tabular* preamble.\label{tab3}}%
-\begin{tabular*}{\textheight}{@{\extracolsep\fill}lccD{.}{.}{4}D{.}{.}{4}D{.}{.}{4}D{.}{.}{4}D{.}{.}{4}D{.}{.}{4}@{\extracolsep\fill}}%
-\toprule
-  & \textbf{col2 head} & \textbf{col3 head} & \multicolumn{1}{c}{\textbf{10}} &\multicolumn{1}{c}{\textbf{20}} &\multicolumn{1}{c}{\textbf{30}} &\multicolumn{1}{c}{\textbf{10}} &\multicolumn{1}{c}{\textbf{20}} &\multicolumn{1}{c}{\textbf{30}} \\
-\midrule
-  &col2 text &col3 text &0.7568&1.0530&1.2642&0.9919&1.3541&1.6108 \\
-  & &col2 text &12.5701 &19.6603&25.6809&18.0689&28.4865&37.3011 \\
-3 &col2 text  & col3 text &0.7426&1.0393&1.2507&0.9095&1.2524&1.4958 \\
-  & &col3 text &12.8008&19.9620&26.0324&16.6347&26.0843&34.0765 \\
-  & col2 text & col3 text &0.7285&1.0257&1.2374&0.8195&1.1407&1.3691\tnote{*} \\
-  & & col3 text &13.0360&20.2690&26.3895&15.0812&23.4932&30.6060\tnote{\dagger} \\
-\bottomrule
-\end{tabular*}
-\begin{tablenotes}%%[\textheight]
-\item[*] First sideways table footnote. Sideways table footnote. Sideways table footnote. Sideways table footnote.
-\item[$\dagger$] Second sideways table footnote. Sideways table footnote. Sideways table footnote. Sideways table footnote.
-\end{tablenotes}
-\end{sidewaystable}
+%Young M dwarfs are both interesting for transiting planet surveys and favorable targets for flare localization.
 
-\begin{sidewaysfigure}
-\centerline{\includegraphics[width=542pt,height=9pc,draft]{empty}}
-\caption{Sideways figure caption. Sideways figure caption. Sideways figure caption. Sideways figure caption. Sideways figure caption. Sideways figure caption.\label{fig3}}
-\end{sidewaysfigure}
+In Section~\ref{sec:systematic}, we have seen that young M dwarfs are favorable targets for the localization of large flares on the stellar surface. 
+The same M dwarfs are of special interest in the context of habitability of exoplanets, because a. they are prime targets for transiting exoplanet surveys, b. their habitable zones are much closer to the star than in solar-type stars and c. they show high and persistent magnetic activity.
+In these stars, large flares and associated CMEs and EPs are able to alter and even evaporate the atmospheres of habitable zone planets.
 
-Morbi ut tellus ut pede tincidunt porta. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam congue neque id dolor.
+Current models of atmospheric chemistry and evaporation do not take into account latitude distributions or assume solar ones. \citet{tilley2019} assume solar-like latitude distributions of flares, which is contrasted by observations that suggest that large flaring regions reside at much higher latitudes (Ilin+2021, Wolter2008).
+This is noteworthy because high latitude flares may have a different contribution to exoplanetary space weather than equatorial flares, especially CMEs and EPs.
 
-Donec et nisl at wisi luctus bibendum. Nam interdum tellus ac libero. Sed sem justo, laoreet vitae, fringilla at,
-adipiscing ut, nibh. Etiam id tortor ac mauris porta vulputate.
-Integer porta neque vitae massa~\cite{Bettonvil2003}. Maecenas tempus libero a libero posuere dictum. Vivamus rhoncus tincidunt libero.
-Etiam elementum pretium justo. Vivamus est. Morbi a tellus eget pede tristique commodo~\cite{Rutten2007} Nulla nisl. Vestibulum
-sed nisl eu sapien cursus rutrum.
+The analysis in Ilin+2021 suggests that the optically thick blackbody emission that arises from the photospheric footpoints is attenuated by $40-80\%$ at the planet when flares are placed closer to the poles than to the equator (assuming the star-planet system is spin-orbit aligned). But the energetic XUV emission, which is much more effective in altering the composition of or evaporating exoplanetary atmospheres (CITE), originates from a volume within the upper atmosphere of the star and tends to be optically thin so that the attenuation in the optical regime does not apply.
+%- While the optical emission from a flares carries the majority of the released energy during the event (Aschwanden something?), the wavelengths relevant to atmospheric chemistry and evaporation, i.e. X-ray and UV bands, are optically thin and not affected by geometrical foreshortening that causes the decreased impact in the optical.
+%- X-ray emission is known to be optically thin, but how much this is true in the UV regime depends on the atmospheric conditions of M dwarfs and is not fully understood. If UV radiation is optically thick, for instance in the biologically active near-UV regime, geometrical foreshortening may mitigate its impact or increase it in the case of misaligned systems.
+ %   - While current observational constrains on UV flux are not affected by this on average, it may play a significant role in individual systems, pushing planets into or out of the habitable zone.
+  %  - Implicit in this is that HZ is not simply defined as based on the stellar irradiation as a function of orbital distance, but takes into account space weather effects like atmospheric chemistry and evaporation
+%- So we cannot extrapolate from the optical, also because the high-energy emission partly originates from the coronal loops at higher altitudes, and may be seen by the planet even if the footpoints are far behind the limb.
+ %   - length of coronal loops in young stars have often been estimated as large as several times the stellar radius (e.g., Favata et al. 2005; McCleary and Wolk 2011; Hartmann et al. 2016; Reale et al. 2018).
+On the other hand, solar EPs and CMEs are ejected in a cone radially outward from the locus of the eruption. It is however, an open question to what degree this holds true for other stars, and in particular stars with strong large scale fields that are also the stars that produce the most intense flares.
+Models have shown that such strong fields can confine, slow down, deflect or fragment the emitted magnetized plasma~\citep{alvaradogomez2018, alvaradogomez2019, kay2019} (CITE). If flares, however, occurred closer to the poles, where the prefentially dipolar component of the magnetic field has the more open field lines, CMEs might escape more easily in the polar direction and leave a planet in the equatorial planet largely unaffected.
+      
+%\subsection{Big unknown: spin-orbit alignment}
+If flaring regions preferentially reside at certain latitudes on the stellar surface, spin-orbit alignment becomes an important ingredient in the assessment of stellar space weather. 
+The above considerations assumed that the planet revolves around the rotational (and magnetic) equator of the star.
+However, although we expect this to be true for planets that form in the protoplanetary disk and are left undisturbed in this position after formation, the research on spin-orbit alignment is still in its infancy, especially for terrestrial planets around low mass M dwarfs.
 
-\section{Conclusions}\label{sec5}
+\section{Summary}\label{sec:summary}
+In the past, flares could only be located on the Sun directly, or by serendipitous discovery on a handful of stars. 
+Methods available for stellar (magnetic) surface mapping like spectropolarimetry work best on large, stable structures like long lived spots or coronal loops, but usually mask more dynamic, smaller scale processes like flares. 
+Using photometric time series, asteroseismolgy and spot migration modeling one can infer the latitudes of starspot groups that rotates at different surface speed of stars that exhibit differential rotation but the recovery of transient events like flares has yet to be demonstrated.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
-felis. Curabitur dictum gravida mauris. 
+With the rapid growth of long-term high cadence monitoring data of thousands of stars with Kepler, TESS and soon PLATO, systematic flare localization becomes observationally more accessible, in particular for young, rapidly rotating, low mass stars.
+The light curves of large gradual flares obtained by these missions are modulated as the flaring region rotates in and out of view on the stellar surface. The morphology of the modulation can be used to reveal the region's latitude and longitude.
 
-Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-vitae ornare odio metus a mi. 
+Localizing flares constrains models of stellar magnetic fields, and helps us understand the interplay between surface magnetic fields and the overlying large-scale fields. When combined with multi-band observations, the full spatio-temporal reconstruction of flares becomes a true possibility.
+
+Finally, we have seen that we need to know the locus of flares and associated CMEs and EPs to accurately estimate the impact of these events on planets in close orbits around active low mass stars. As a consequence, spin-orbit alignment, or its absense, emerges as one of the key star-planet system characteristics.
 
 %\backmatter
 
 \section*{Acknowledgments}
+We thank  Sebastian Pineda for helpful comments and discussion at he XMM-Workshop on CME escape.
+EI acknowledges support from the German National Scholarship Foundation. KP acknowledges support from the German Leibniz Community under grant P67/2018. We made use of numpy~\citep{numpy2020} and pandas~\citep{pandas2010,pandas2020software}.
 
-This is acknowledgment text~\cite{Paivio1975}. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. 
-
-This work was performed under the auspices of the \fundingAgency{National Nuclear Security Administration} of the US Department of Energy at Los Alamos National Laboratory under Contract No. \fundingNumber{DE-AC52-06NA25396} and supported. The authors acknowledge the partial support of the \fundingAgency{DOE Office of Science ASCR Program} under Contract No. \fundingNumber{SJS-AC52-06NA25968}. This work was partially supported by the \fundingAgency{Czech Technical University} grant \fundingNumber{SGS16/247/OHK4/3T/14}, the \fundingAgency{Czech Science Foundation} project \fundingNumber{14-21318S} and by the \fundingAgency{Czech Ministry of Education} project \fundingNumber{RVO 68407700}.
+% This work was performed under the auspices of the \fundingAgency{National Nuclear Security Administration} of the US Department of Energy at Los Alamos National Laboratory under Contract No. \fundingNumber{DE-AC52-06NA25396} and supported. The authors acknowledge the partial support of the \fundingAgency{DOE Office of Science ASCR Program} under Contract No. \fundingNumber{SJS-AC52-06NA25968}. This work was partially supported by the \fundingAgency{Czech Technical University} grant \fundingNumber{SGS16/247/OHK4/3T/14}, the \fundingAgency{Czech Science Foundation} project \fundingNumber{14-21318S} and by the \fundingAgency{Czech Ministry of Education} project \fundingNumber{RVO 68407700}.
 
 \subsection*{Author contributions}
 
@@ -416,168 +193,228 @@ None reported.
 
 The authors declare no potential conflict of interests.
 
-
-\section*{Supporting information}
-
-The following supporting information is available as part of the online article:
-
-\noindent
-\textbf{Figure S1.}
-{500{\uns}hPa geopotential anomalies for GC2C calculated against the ERA Interim reanalysis. The period is 1989--2008.}
-
-\noindent
-\textbf{Figure S2.}
-{The SST anomalies for GC2C calculated against the observations (OIsst).}
-
-
-\appendix
-
-\section{Section title of first appendix\label{app1}}
-
-Use \verb+\begin{verbatim}...\end{verbatim}+ for program codes without math. Use \verb+\begin{alltt}...\end{alltt}+ for program codes with math. Based on the text provided inside the optional argument of \verb+\begin{code}[Psecode|Listing|Box|Code|+\hfill\break \verb+Specification|Procedure|Sourcecode|Program]...+ \verb+\end{code}+ tag corresponding boxed like floats are generated. Also note that \verb+\begin{code}[Code|Listing]...+ \verb+\end{code}+ tag with either Code or Listing text as optional argument text are set with computer modern typewriter font.  All other code environments are set with normal text font. Refer below example:
-
-\begin{lstlisting}[caption={Descriptive Caption Text},label=DescriptiveLabel]
-for i:=maxint to 0 do
-begin
-{ do nothing }
-end;
-Write('Case insensitive ');
-WritE('Pascal keywords.');
-\end{lstlisting}
-
-
-
-\subsection{Subsection title of first appendix\label{app1.1a}}
-
-Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-vitae ornare odio metus a mi. 
-
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-viverra fermentum felis. 
-
-\subsubsection{Subsection title of first appendix\label{app1.1.1a}}
-
-\noindent\textbf{Unnumbered figure}
-
-
-\begin{center}
-\includegraphics[width=7pc,height=8pc,draft]{empty}
-\end{center}
-
-
-Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
-quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. 
-
-Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
-Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. 
-
-\section{Section title of second appendix\label{app2}}%
-
-Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
-quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. 
-
-Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
-Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. 
-
-%== Figure 4 ==
-%% Example for figure inside appendix
-\begin{figure}[t]
-\centerline{\includegraphics[height=10pc,width=78mm,draft]{empty}}
-\caption{This is an example for appendix figure.\label{fig5}}
-\end{figure}
-
-\subsection{Subsection title of second appendix\label{app2.1a}}
-
-Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non odio.
-Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce sed justo
-eu urna porta tincidunt. 
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
-dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. 
-
-\subsubsection{Subsection title of second appendix\label{app2.1.1a}}
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
-felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
-vehicula augue eu neque. 
-Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. 
-
-\begin{center}
-\begin{table}[t]%
-\centering
-\caption{This is an example of Appendix table showing food requirements of army, navy and airforce.\label{tab4}}%
-\begin{tabular*}{20pc}{@{\extracolsep\fill}lcc@{\extracolsep\fill}}%
-\toprule
-\textbf{col1 head} & \textbf{col2 head} & \textbf{col3 head} \\
-\midrule
-col1 text & col2 text & col3 text \\
-col1 text & col2 text & col3 text \\
-col1 text & col2 text & col3 text\\
-\bottomrule
-\end{tabular*}
-\end{table}
-\end{center}
-
-
-Example for an equation inside appendix
-\begin{equation}
-\mathcal{L}\quad \mathbf{\mathcal{L}} = i \bar{\psi} \gamma^\mu D_\mu \psi - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi\label{eq25}
-\end{equation}
-
-\section{Example of another appendix section\label{app3}}%
-
-Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-vitae ornare odio metus a mi. 
-
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-viverra fermentum felis. 
-
-\begin{equation}
-\mathcal{L} = i \bar{\psi} \gamma^\mu D_\mu \psi
-    - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi
-\label{eq26}
-\end{equation}
-
-Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
-ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. 
-
-Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. 
-
-
-\begin{center}
-\begin{tabular*}{20pc}{@{\extracolsep\fill}lcc@{\extracolsep\fill}}%
-\toprule
-\textbf{col1 head} & \textbf{col2 head} & \textbf{col3 head} \\
-\midrule
-col1 text & col2 text & col3 text \\
-col1 text & col2 text & col3 text \\
-col1 text & col2 text & col3 text \\
-\bottomrule
-\end{tabular*}
-\end{center}
-
-
-Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit. 
-
-Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
-quam, in hendrerit risus eros eget felis. 
-
-\nocite{*}% Show all bib entries - both cited and uncited; comment this line to view only cited bib entries;
-\bibliography{Wiley-ASNA}%
-
-
-\section*{Author Biography}
-(if applicable)
-
-\begin{biography}{\includegraphics[width=60pt,height=70pt,draft]{empty}}{\textbf{Author Name.} This is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text .}
-\end{biography}
-
+\bibliography{flareloci}
 \end{document}
+
+% \section*{Supporting information}
+
+% The following supporting information is available as part of the online article:
+
+% \noindent
+% \textbf{Figure S1.}
+% {500{\uns}hPa geopotential anomalies for GC2C calculated against the ERA Interim reanalysis. The period is 1989--2008.}
+
+% \noindent
+% \textbf{Figure S2.}
+% {The SST anomalies for GC2C calculated against the observations (OIsst).}
+
+
+% \appendix
+
+% \section{Section title of first appendix\label{app1}}
+
+% Use \verb+\begin{verbatim}...\end{verbatim}+ for program codes without math. Use \verb+\begin{alltt}...\end{alltt}+ for program codes with math. Based on the text provided inside the optional argument of \verb+\begin{code}[Psecode|Listing|Box|Code|+\hfill\break \verb+Specification|Procedure|Sourcecode|Program]...+ \verb+\end{code}+ tag corresponding boxed like floats are generated. Also note that \verb+\begin{code}[Code|Listing]...+ \verb+\end{code}+ tag with either Code or Listing text as optional argument text are set with computer modern typewriter font.  All other code environments are set with normal text font. Refer below example:
+
+% \begin{lstlisting}[caption={Descriptive Caption Text},label=DescriptiveLabel]
+% for i:=maxint to 0 do
+% begin
+% { do nothing }
+% end;
+% Write('Case insensitive ');
+% WritE('Pascal keywords.');
+% \end{lstlisting}
+
+
+
+% \subsection{Subsection title of first appendix\label{app1.1a}}
+
+% Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+% pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+% vitae ornare odio metus a mi. 
+
+% Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+% viverra fermentum felis. 
+
+% \subsubsection{Subsection title of first appendix\label{app1.1.1a}}
+
+% \noindent\textbf{Unnumbered figure}
+
+
+% \begin{center}
+% \includegraphics[width=7pc,height=8pc,draft]{empty}
+% \end{center}
+
+
+% Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+% venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+% quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. 
+
+% Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+% Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. 
+
+% \section{Section title of second appendix\label{app2}}%
+
+% Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+% venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+% quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. 
+
+% Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+% Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. 
+
+% %== Figure 4 ==
+% %% Example for figure inside appendix
+% \begin{figure}[t]
+% \centerline{\includegraphics[height=10pc,width=78mm,draft]{empty}}
+% \caption{This is an example for appendix figure.\label{fig5}}
+% \end{figure}
+
+% \subsection{Subsection title of second appendix\label{app2.1a}}
+
+% Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non odio.
+% Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce sed justo
+% eu urna porta tincidunt. 
+
+% Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
+% dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. 
+
+% \subsubsection{Subsection title of second appendix\label{app2.1.1a}}
+
+% Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
+% felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
+% vehicula augue eu neque. 
+% Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. 
+
+% \begin{center}
+% \begin{table}[t]%
+% \centering
+% \caption{This is an example of Appendix table showing food requirements of army, navy and airforce.\label{tab4}}%
+% \begin{tabular*}{20pc}{@{\extracolsep\fill}lcc@{\extracolsep\fill}}%
+% \toprule
+% \textbf{col1 head} & \textbf{col2 head} & \textbf{col3 head} \\
+% \midrule
+% col1 text & col2 text & col3 text \\
+% col1 text & col2 text & col3 text \\
+% col1 text & col2 text & col3 text\\
+% \bottomrule
+% \end{tabular*}
+% \end{table}
+% \end{center}
+
+
+% Example for an equation inside appendix
+% \begin{equation}
+% \mathcal{L}\quad \mathbf{\mathcal{L}} = i \bar{\psi} \gamma^\mu D_\mu \psi - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi\label{eq25}
+% \end{equation}
+
+% \section{Example of another appendix section\label{app3}}%
+
+% Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+% pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+% vitae ornare odio metus a mi. 
+
+% Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+% viverra fermentum felis. 
+
+% \begin{equation}
+% \mathcal{L} = i \bar{\psi} \gamma^\mu D_\mu \psi
+%     - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi
+% \label{eq26}
+% \end{equation}
+
+% Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+% viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+% ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. 
+
+% Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+% amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. 
+
+
+% \begin{center}
+% \begin{tabular*}{20pc}{@{\extracolsep\fill}lcc@{\extracolsep\fill}}%
+% \toprule
+% \textbf{col1 head} & \textbf{col2 head} & \textbf{col3 head} \\
+% \midrule
+% col1 text & col2 text & col3 text \\
+% col1 text & col2 text & col3 text \\
+% col1 text & col2 text & col3 text \\
+% \bottomrule
+% \end{tabular*}
+% \end{center}
+
+
+% Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+% amet, consectetuer adipiscing elit. 
+
+% Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+% venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+% quam, in hendrerit risus eros eget felis. 
+
+% \nocite{*}% Show all bib entries - both cited and uncited; comment this line to view only cited bib entries;
+% \bibliography{Wiley-ASNA}%
+
+
+% \section*{Author Biography}
+% (if applicable)
+
+% \begin{biography}{\includegraphics[width=60pt,height=70pt,draft]{empty}}{\textbf{Author Name.} This is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text .}
+% \end{biography}
+
+% \end{document}
+
+
+% \begin{figure}[t]
+% 	\centerline{\includegraphics[width=78mm,height=9pc,draft]{empty}}
+% 	\caption{This is the sample figure caption.\label{fig2}}
+% \end{figure}
+
+
+% \begin{center}
+% \begin{table*}[t]%
+% \caption{This is sample table caption.\label{tab1}}
+% \centering
+% \begin{tabular*}{500pt}{@{\extracolsep\fill}lccD{.}{.}{3}c@{\extracolsep\fill}}
+% \toprule
+% &\multicolumn{2}{@{}c@{}}{\textbf{Spanned heading\tnote{1}}} & \multicolumn{2}{@{}c@{}}{\textbf{Spanned heading\tnote{2}}} \\\cmidrule{2-3}\cmidrule{4-5}
+% \textbf{col1 head} & \textbf{col2 head}  & \textbf{col3 head}  & \multicolumn{1}{@{}l@{}}{\textbf{col4 head}}  & \textbf{col5 head}   \\
+% \midrule
+% col1 text & col2 text  & col3 text  & 12.34  & col5 text\tnote{1}   \\
+% col1 text & col2 text  & col3 text  & 1.62  & col5 text\tnote{2}   \\
+% col1 text & col2 text  & col3 text  & 51.809  & col5 text   \\
+% \bottomrule
+% \end{tabular*}
+% \begin{tablenotes}%%[341pt]
+% \item Source: Example for table source text.
+% \item[1] Example for a first table footnote.
+% \item[2] Example for a second table footnote.
+% \end{tablenotes}
+% \end{table*}
+% \end{center}
+
+% \begin{center}
+% \begin{table}[t]%
+% \centering
+% \caption{This is sample table caption.\label{tab2}}%
+% \tabcolsep=0pt%
+% \begin{tabular*}{20pc}{@{\extracolsep\fill}lcccc@{\extracolsep\fill}}
+% \toprule
+% \textbf{col1 head} & \textbf{col2 head}  & \textbf{col3 head}  & \textbf{col4 head}  & \textbf{col5 head} \\
+% \midrule
+% col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$\dagger$}   \\
+% col1 text & col2 text  & col3 text  & col4 text  & col5 text   \\
+% col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$\ddagger$}   \\
+% \bottomrule
+% \end{tabular*}
+% \begin{tablenotes}
+% \item Source: Example for table source text.
+% \item[$\dagger$] Example for a first table footnote.
+% \item[$\ddagger$] Example for a second table footnote.
+% \end{tablenotes}
+% \end{table}
+% \end{center}
+
+
+
+% \begin{figure*}[t]
+% \centerline{\includegraphics[width=342pt,height=9pc,draft]{empty}}
+% \caption{This is the sample figure caption.\label{fig1}}
+% \end{figure*}
