@@ -2,6 +2,11 @@
 
 \articletype{Article Type}%
 
+\usepackage{ulem}
+
+\definecolor{darkred}{cmyk}{0,1,1,0.45}
+\newcommand{\jdag}[1]{\textcolor{darkred}{#1}}
+
 \received{XXXX}
 \revised{XXXX}
 \accepted{XXXX}
@@ -16,11 +21,13 @@
 
 \author[1,2]{Katja Poppenh\"ager}
 
+\author[1]{Juli\'an D. Alvarado-G\'omez}
+
 % \author[3]{Author Three}
 
 \authormark{ILIN \textsc{et al}}
 
-\address[1]{\orgname{Leibniz-Institute for Astrophysics Potsdam (AIP)}, \orgaddress{An der Sternwarte 16, \country{germany}}}
+\address[1]{\orgname{Leibniz-Institute for Astrophysics Potsdam (AIP)}, \orgaddress{An der Sternwarte 16, \country{Germany}}}
 \address[2]{\orgdiv{Institute for Physics and Astronomy}, \orgname{University of Potsdam}, \orgaddress{Karl-Liebknecht-Str. 24/25, 14476 Potsdam \country{Germany}}}
 
 % \address[3]{\orgdiv{Org Division}, \orgname{Org Name}, \orgaddress{\state{State name}, \country{Country name}}}
@@ -29,11 +36,11 @@
 
 % \presentaddress{This is sample for present address text this is sample for present address text}
 
-\abstract{Stars are only spherically symmetrical to first order. The way in which stellar rotation and magnetism break this symmetry puts important observational constraints on stellar magnetic fields, and factor in the assessment of the impact of stellar activity on exoplanet atmospheres.
+\abstract{Stars are uniform spheres, but only to first order. The way in which stellar rotation and magnetism break this symmetry places important observational constraints on stellar magnetic fields, and factors in the assessment of the impact of stellar activity on exoplanet atmospheres.
 
 The spatial distribution of flares on the solar surface is well known to be non-uniform, but elusive on other stars. We briefly review the techniques available to recover the loci of stellar flares, and highlight a new method that enables systematic flare localization directly from optical light curves.
 
-We provide an estimate of the number of flares we may be able to localize with the Transiting Exoplanet Survey Satellite (TESS), and show that it is consistent with the first results obtained from the first full sky scan of the mission. We suggest that non-uniform flare latitude distributions need to be taken into account in accurate assessments of exoplanet habitability. }
+We provide an estimate of the number of flares we may be able to localize with the Transiting Exoplanet Survey Satellite (TESS), and show that it is consistent with the results obtained from the first full sky scan of the mission. We suggest that non-uniform flare latitude distributions need to be taken into account in accurate assessments of exoplanet habitability. }
 
 \keywords{stars: activity, stars: flare, stars: magnetic fields, methods: data analysis}
 
@@ -46,50 +53,60 @@ We provide an estimate of the number of flares we may be able to localize with t
 
 \section{Introduction}\label{sec:intro}
 
-Flares are magnetic explosions that occur in the atmospheres of all stars that possess an outer convection zone. They are high-energy phenomena, during which magnetic re-connection triggers an eruptive energy release in form of electromagnetic radiation from radio bands, through optical and UV to soft and hard X-ray emission, each with a characteristic time evolution. These general features are shared by flares observed on most stars from the Sun, solar analogs down to fully convective dwarfs, and from pre-main sequence to solar age. In our interpretation of stellar flare observations we therefore often extrapolate from our knowledge of the Sun.
+Flares are magnetic explosions that occur in the atmospheres of all stars that possess an outer convection zone. They are high-energy phenomena, during which magnetic re-connection triggers a sudden energy release in form of electromagnetic radiation from radio bands, through optical and UV to soft and hard X-ray emission, each with a characteristic time evolution~\citep{priest2002}. These general features are shared by flares observed on most stars from the Sun, solar analogs down to fully convective dwarfs, and from pre-main sequence to solar age~\citep[see, e.g.,][]{getman2005,walkowicz2011, benz2017,paudel2018}. In our interpretation of stellar flare observations we therefore often extrapolate from our knowledge of the Sun.%,shibayama2013
 
-On the Sun, flares occur in the vicinity of sunspots in a belt around the solar equator, and almost never above $30^\circ$ latitude. However, the discovery of polar spots on young sun-like and low mass stars broke the analogy between the solar and stellar situations. Where flares occur on the surfaces of stars is an open question. 
+On the Sun, flares occur in the vicinity of sunspots in a belt around the solar equator, and almost never above $30^\circ$ latitude~\citep{chen2011}. However, the discovery of polar spots on young sun-like and low mass stars broke the analogy between the solar and stellar situations~\citep{strassmeier2002}. Where flares occur on the surfaces of stars is an open question. %\jdag{These two paragraphs read well but you should back up some of the ideas with citations.}
 
-Locating flaring regions and coronal loops on the surfaces of stars has so far been possible only in lucky cases, where flares occurred during spectropolarimetric observations, or during eclipses of a binary star. 
+Locating flaring regions and coronal loops on the stellar sphere has so far been possible only in lucky cases, where flares occurred during spectropolarimetric observations, or eclipses of a binary star. 
 
-The latter occurred in the Algol binary system, where a large X-ray flare on Algol B was occulted by the primary star, and revealed that the emission originated from the south pole of the secondary~\citep{schmitt1999}. Later, \citet{peterson2010} used multi-epoch radio imaging to identify a large, quasi-stable, pole-oriented coronal loop structure anchored to Algol B. 
+The latter occurred in the Algol binary system, where a large X-ray flare on Algol B was occulted by the primary star, and revealed that the emission originated from the south pole of the secondary~\citep{schmitt1999}. The event was probably also accompanied by a giant coronal mass ejection~\citep[CME,][]{moschou2017}, and could be associated with a large and stable, pole-oriented coronal loop structure~\citep{peterson2010}.%, and  detected a giant flare accompanied by a coronal mass ejection (CME). \jdag{Perhaps relevant for the space weather aspect of the proceeding: you can also mention here that this flare on Algol (The Demon Star) was probably accompanied by a Monster CME (Moschou+ 2017; Jeremy and his brilliant paper names ;) ).}
 
-In another lucky case, \citet{wolter2008} could use the Doppler Imaging (DI) technique on the Ca II K line to localize an active region around $56\pm10$ deg latitude in the chromosphere that happened to flare during the observations on the K2 star BO Mic. The flare lasted for 4 h, and appeared at the fringes of large spot structures that had also been recovered with DI.
+In another lucky case, \citet{wolter2008} could apply the Doppler Imaging (DI) technique to the Ca II K line to localize a flaring region at $56\pm10^\circ$ latitude in the chromosphere on the K2 star BO Mic. The flare lasted for 4~h, and appeared at the fringes of large spot structures that had also been recovered with DI.
 
 More recently, \citet{berdyugina2017} reconstructed a magnetic field loop that erupted in flare-like bursts on a late M dwarf using spectropolarimetry. Because the inclination of the stellar rotation axis of this star was not well-constrained, they could not pin down what latitudes the loop occupied but recovered its topology regardless.
 
-The serendipity of these discoveries is due to the randomness of flare occurrence times, and the rarity of sufficiently long, large flares to which the analysis techniques were sensitive. 
+The serendipity of these discoveries is due to the randomness of flare occurrence times, and the rarity of sufficiently gradual, large flares to which the analysis techniques were sensitive. 
 
-In these proceedings, we briefly review the methods available to infer the loci of flares on the stellar surface in Section~\ref{sec:howto}, where we highlight a new direct method for systematic localization and estimate the number of flares suited for this technique. In Section~\ref{sec:implications}, we discuss how flare loci help us understand the nature of stellar magnetic fields ~(Section~\ref{sec:mf}), and outline the implications for exoplanetary space weather~(Section~\ref{sec:planets}). We conclude with a short summary in Section~\ref{sec:summary}.
+In Section~\ref{sec:howto}, we briefly review the methods available to infer the loci of flares on the stellar surface. We highlight a new direct method for systematic localization and estimate the number of flares suited for this technique in Section~\ref{sec:systematic}. In Section~\ref{sec:implications}, we discuss how flare loci help us understand the nature of stellar magnetic fields ~(Section~\ref{sec:mf}), and outline the implications for exoplanetary space weather~(Section~\ref{sec:planets}). We conclude with a short summary in Section~\ref{sec:summary}.
 
 \section{How to localize flares on the stellar surface}
 \label{sec:howto}
 
 \subsection{Indirectly via Doppler Imaging and Zeeman Doppler Imaging }
-Doppler Imaging~\citep{deutsch1958, goncharskii1977} and Zeeman Doppler Imaging~\citep{semel1989, donati1989} of stellar magnetic fields have been successfully used to map stellar spot structure and global magnetic field configuration in FGKM dwarfs~\citep{strassmeier2002,morin2008,morin2010,see2019}.
+Doppler Imaging~\citep[DI,][]{deutsch1958, goncharskii1977} and Zeeman Doppler Imaging~\citep[ZDI,][]{semel1989, donati1989} of stellar magnetic fields have been successfully used to map stellar spot structures and global magnetic field configurations in FGKM dwarfs~\citep{strassmeier2002,morin2008,morin2010,see2019}. %\jdag{The citation order in the pdf is wrong.}
 
-Although spot size generally correlates with flare size~\citep{maehara2017}, flares do not correlate directly with rotational phase in stars that show activity (i.e., dark spot or bright region) induced rotational variability~\citep{doyle2019}. So it is not clear where flares occur on these active stars, although we know that on the Sun, flares occur in the vicinity of spots, and more energetic flares occur in the more complex spot groups~\citep{sammis2000}. 
+Although spot size generally increases with flare frequency~\citep{maehara2017}, flares do not correlate directly with rotational phase in stars that show activity induced rotational variability~\citep[i.e., dark spots or bright regions,][]{ramsay2013,doyle2019}. So it is not clear where flares occur on these active stars, although we know that on the Sun, flares are found in the vicinity of spots, and more energetic flares occur in more complex spot groups~\citep{sammis2000}. %,doyle2018
 
 \citet{berdyugina2017} and \citet{wolter2008} used ZDI and DI to more directly recover coronal loops and emission loci, respectively, from flares that occurred during their observation campaigns. However, these methods would require prohibitively expensive long-term spectroscopic monitoring to capture flares on purpose.
 %- Ref to: \citep{berdyugina2017, wolter2008}
 
 \subsection{Indirectly via asteroseismology and light curve inversion}
 
-Using solely activity-driven perturbations in asteroseismic observations can in theory reveal the latitudes of active regions~\citep{gizon2002, papini2015, papini2019}. The method poses that strong magnetic field clusters disturb asteroseismic oscillations that then become visible as characteristic shifts in the power spectrum that trace the location of the clusters.
+Activity-driven perturbations in asteroseismic observations can in theory reveal the latitudes of active regions~\citep{gizon2002, papini2015, papini2019}. The method poses that strong magnetic field clusters disturb asteroseismic oscillations that then become visible as characteristic shifts in the power spectrum that trace the location of the clusters.
 
-\citep{berdyugina2005} suggested an alternative approach that combines asteroseismic information on the differential rotation profile of a star with spot-induced variability obtained from time series photometry. It proved more feasible than the asteroseismology-only technique, leading to the first multi-epoch spot latitude survey, that enabled time resolved spot latitude mapping on a sun-like star, which is known as butterfly diagram in the solar case~\citep{benomar2018, bazot2018}.
+\citet{berdyugina2005} suggested an alternative approach that combines asteroseismic information on the differential rotation profile of a star with spot-induced variability obtained from time series photometry. It proved more feasible than the asteroseismology-only technique, leading to the first multi-epoch spot latitude survey. The result was a time resolved spot latitude map on a sun-like star, which is known as butterfly diagram in the solar case~\citep{bazot2018}.%benomar2018, 
 
-If an eclipsing body is present in the system, comparing the stellar light curve of the active star in and out of eclipse at the same rotational phases provides information about the structures covered by the eclipsing body. In systems with low obliquity of the transiting body, a narrow strip in latitude can be resolved in addition to the longitudes~\citep{huber2009,huber2010}; in sufficiently misaligned system, even butterfly diagrams can be recovered~\citep{netto2020}. 
+If an eclipsing body is present in the system, comparing the stellar light curve of the active star in and out of eclipse at the same rotational phases provides information about the structures covered by the eclipsing body. In systems with low obliquity, a well-defined strip in latitude can be resolved in addition to the longitudes~\citep{huber2009,huber2010}; in sufficiently misaligned systems, even butterfly diagrams can be recovered~\citep{netto2020}. 
 
-Although flare localization is in principle possible with these methods and may be less expensive that Z(DI) because it relies purely on light curve observations, all three methods are better suited to recover more stable magnetically active structures like starspots, which provide only indirect information about flare location.
+Although flare localization is in principle possible with these methods, and is certainly less expensive that Z(DI) because it relies mostly on photometric observations, all three methods are better suited to recover more stable magnetically active structures like starspots, which provide only indirect information about flare location.
 
 \subsection{Directly from optical light curves}
 \label{sec:systematic}
-With the launch of Kepler~\citep{borucki2010} and the Transiting Exoplanet Survey Satellite~\citep[TESS,][]{ricker2015}, systematic flare monitoring has become feasible for hundreds of thousands of stars. Ilin+2021 used TESS data from the first full sky scan of the mission to systematically search for rapidly rotating, fully convective stars, and found flares that could be located directly using the optical light curve of the star. 
-They recovered four flares that lasted longer than a full rotation period on fully convective M dwarfs.
-These flares' light curves were modulated as the flaring region rotated in and out of view on the fast spinning stellar surface.
-They found that all their flares occurred at latitudes closer to the rotational poles of their respective stars than to the equator.
-Except for an independent measurement of the inclination of the stellar rotation axis, which was required determine the latitude of the flaring region, the light curve contained all necessary information to fully determine the location of the flare on the stellar surface.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\hsize]{model_illustration_annot_xmm_an2.png}
+    \caption{Direct flare localization from optical light curves. The star (blue sphere) rotates as the active region (red dots) erupts in a flare. Consequently, the flare light curve (grey dashed line in bottom panel) is modulated geometrically in phase with rotation (red line). If the inclination of the stellar rotation axis is known, the location of the flaring region can be unambiguously recovered.}%\jdag{Is there any reason why your star is rotating in the opposite sense as the Sun? (i.e. not following the right-hand rule)}}
+    \label{fig:ilin}
+\end{figure}
+
+
+With the launch of Kepler~\citep{borucki2010} and the Transiting Exoplanet Survey Satellite~\citep[TESS,][]{ricker2015}, systematic flare monitoring became feasible for hundreds of thousands of stars. In~\citet{ilin2021b}, we used TESS data from the first full sky scan of the mission to systematically search for rapidly rotating, fully convective stars, and found flares that could be located directly using the optical light curve of the star. 
+We recovered four flares that lasted longer than a full rotation period on four fully convective M dwarfs.
+%, which has been observed on a few other stars in the past~\citep{skinner1997}.
+These flares' light curves were modulated as the flaring region rotated in and out of view on the fast spinning stellar surface~(Fig.~\ref{fig:ilin}). We found that all these \textit{flares occurred at latitudes closer to the rotational poles of the stars than to the equator}.
+Except for an independent measurement of the inclination of the stellar rotation axis -- required to disambiguate the latitude of the flaring region -- the light curve contained all necessary information to fully determine the location of the flare on the stellar surface.
 As TESS, and soon PLATO~\citep{rauer2014}, will continue the high-cadence monitoring of flaring stars, this method can be applied to a steadily growing high quality data set.
 
 
@@ -97,100 +114,88 @@ As TESS, and soon PLATO~\citep{rauer2014}, will continue the high-cadence monito
 \begin{figure}
     \centering
     \includegraphics[width=\hsize]{guenther_repr_fwhm_freq.png}
-    \caption{Flare frequency above $E_{bol}$ in flare stars with flares with measured $FWHM$. Note that the frequencies are for individual flaring stars that were detected as flaring within the first two Sectors of TESS Cycle 1 by~\citet{guenther2020}. Stars that flare but did not show any flares within the two first Sectors are not included.}
+    \caption{Flare frequency above $E_{bol}$ in flare stars with flares with measured $FWHM$. Note that the frequencies are for individual stars that were caught flaring within the first two Sectors of TESS Cycle 1 by~\citet{guenther2020}. Stars that flare but did not show any flares within the two first Sectors are not included.}
     \label{fig:guenther}
 \end{figure}
 
 \subsubsection{How many localizable flares will TESS observe?}
-The method presented in Ilin+2021 requires the star to rotate rapidly, and flare actively, so that there is a possibility for an event than spans more than a full rotation period to occur. 
-Rapid rotation and flaring activity are strongly correlated in stars with an outer convection zone (or fully convective stars) because rotation powers the stellar dynamo that produces a dynamic magnetic field that generates flares.
-Flares that last longer than 12 h are uncommon but not exceedingly rare.
-Based on the TESS sample of fully convective dwarfs, Ilin+2021 estimate that flares suited for localization analysis occur once every 120 years per star. This number will be lower for earlier type stars because they spin down faster, and lose their flaring activity at earlier ages, too~\citep{kowalski2009,hilton2010,chang2015,ilin2019,ilin2021}.
-The flares in Ilin+2021 had TESS band energies around $10^{34}$ erg  and $FWHM$ of about $1-1.5$ h. 
-Depending on the spectral type, at $FWHM > 1$ h, flare energies range between $\sim 10^{33}-10^{37}$ erg. Earlier type stars tend to have higher flare energies at similar $FWHM$~\citep{guenther2020}.
+The method we presented in~\citet{ilin2021b} requires the star to rotate rapidly, and flare actively, so that an event than spans more than a full rotation period can possibly occur. 
+Rapid rotation and flaring activity are strongly correlated in stars with an outer convection zone~\citep{doorsselaere2017} because rotation powers the stellar dynamo that produces a dynamic magnetic field that generates flares~\citep{parker1955}.%roberts1972
 
-In Fig.~\ref{fig:guenther}we show how often flares above a certain energy occur as a function of that flare's $FWHM$. Gradual flares with $FWHM > 1$ h in actively flaring stars are fewer than impulsive flares, and these flares' energies tend to be high which in turn lowers their frequencies among all flares. Using the data illustrated in Fig.~\ref{fig:guenther}, we can estimate how many flares that are suited for localization can be found in one full sky scan conducted with TESS.
+Flares that last longer than 12 h are uncommon but not exceedingly rare.
+Based on the TESS sample of fully convective dwarfs, we estimate in~\citet{ilin2021b} that flares suited for localization analysis occur once every 120 years per star. This number will be lower for earlier type stars because they spin down faster~\citep{barnes2003,reiners2008}, and lose their flaring activity at earlier ages, too~\citep{hilton2010,chang2015,ilin2019,ilin2021}. %kowalski2009,
+The flares in~\citet{ilin2021b} had TESS band energies around $10^{34}$ erg, and flare durations above half the maximum flare flux ($FWHM$) of about $1-1.5$ h. %\jdag{Your usage here of the FWHM is not the standard in astrophysics (which comes in units of wavelength). I suggest you include one sentence explaining the measurement of FWHM in the context of flares (i.e. time-domain).} 
+Depending on the spectral type, at $FWHM > 1$ h, flare energies range between $\sim 10^{33}-10^{37}$ erg, and earlier type stars tend to have higher flare energies at similar $FWHM$~\citep{guenther2020}.
+
+In Fig.~\ref{fig:guenther}we show how often flares above a certain energy occur as a function of that flare's $FWHM$. Gradual flares with $FWHM > 1$ h in actively flaring stars are fewer than impulsive flares, and these flares' energies tend to be high, which in turn lowers their frequencies among all flares (i.e., the upper right region in Fig.~\ref{fig:guenther} is mostly empty). Using the data from~\citet{guenther2020}, we can estimate how many localizable flares can be found in one full sky scan conducted with TESS.
 
 %Therefore, most stars that rotate quickly due to their young age or due to binary interaction are candidates for flare localization. 
-Observations of young clusters show that stars are born with a wide distribution of stellar rotation rates, which widens further during the pre-main sequence contraction phase, reaching the highest rotation rates at zero-age main sequence~\citep[ZAMS,][, and references therein]{johnstone2015,johnstone2021}.
-At Pleiades age (125 Myr, ZAMS), about $30\%$ of stars with spectral types later than F5 and earlier than M6 rotate at $P_{rot}<12$ h, $>75\%$ of which are stars in the fully convective regime~\citep{rebull2016}. 
-At Praesepe/Hyades age (600-800 Myr), the fast rotators comprise only about $6\%$ of stars in that regime, the fully convective stars still making up the majority of these~\citep{douglas2019}.
-Such fast rotators all reside in the saturated activity regime~\citep{wright2011,wright2016,wright2018,newton2017}, and thus are expected to be actively flaring~\citep{doorsselaere2017, clarke2018}.
+Observations of young clusters show that stars are born with a wide distribution of stellar rotation rates, which widens further during the pre-main sequence contraction phase, reaching the highest rotation rates at zero-age main sequence~\citep[ZAMS,][and references therein]{johnstone2021}. %johnstone2015
+At Pleiades age (125 Myr, ZAMS), about $30\%$ of stars with spectral types later than F5 and earlier than M6 rotate at $P_{rot}<12$ h, more than $75\%$ of which are stars in the fully convective regime~\citep{rebull2016}. 
+At Praesepe/Hyades age (600-800 Myr), the $P_{rot}<12$ h stars comprise only about $6\%$ of stars in that spectral regime, the fully convective stars still making up the majority of these~\citep{douglas2019}.
+Such fast rotators all reside in the saturated activity regime~\citep{wright2011,wright2018,newton2017}, and thus are expected to be actively flaring~\citep{doorsselaere2017, clarke2018}.%wright2016, %\jdag{The citation order is mixed up in the pdf. This weird format follows an alphabetical order irrespective of the year...}
 
-Assuming that the flaring stars in Fig.~\ref{fig:guenther} tend to be young, we can estimate that a similar fraction of these stars are rapidly rotating. For a conservative estimate we can assume $1\%$, a lower number than what we observe in the Pleiades, Praesepe and the Hyades. We can also take into account as a lower limit that about $1\%$ of solar-type stars are usually found flaring within 1 to 2 Sectors of observations~\citep{tu2021}. From Fig.~\ref{fig:guenther}, we obtain a lower order of magnitude estimate of $0.01$ flares per day with sufficiently large $FHWM$ (considering that flares in the corresponding energy range can also be more impulsive), which yields an approximate lower limit of $10^{-6}$ localizable flares per day, or one flare every $\sim2 700$ years of observations per star. This number is much lower than the estimate for the fully convective stars (one flare in 120 years), because these stars rotate faster and flare more persistently during their lifetimes than solar-type stars. However, since TESS observes $200\,000$ mostly FGKM stars per year of observations for $\sim 25$ d each, each year of TESS operations would yield at least $\sim 5$ localizable flares, which is consistent with the four flares detected by Ilin+2021 because the majority of the five are expected in the fully convective M dwarf regime based on the distribution of rotation rates. 
+Assuming that the flaring stars in Fig.~\ref{fig:guenther} tend to be young, we can estimate that a similar fraction of these stars are rapidly rotating. For a conservative estimate we can assume $1\%$, a lower number than what we observe in the Pleiades, Praesepe and the Hyades. We can also take into account as a lower limit that about $1\%$ of stars are usually found flaring within 1 to 2 Sectors of observations~\citep{tu2021, guenther2020}. From the flare data in~\citet{guenther2020}, we obtain a lower order of magnitude estimate of $0.01$ flares per day with sufficiently large $FHWM$ (considering that flares in the corresponding energy range can also be more impulsive), which yields an approximate lower limit of $10^{-6}$ localizable flares per day, or one flare every $\sim2 700$ years of observations per star. This number is much lower than the estimate for the fully convective stars (one flare in 120 years), because these stars rotate faster and flare more persistently during their lifetimes than solar-type stars. However, since TESS observes $200\,000$ mostly FGKM stars per full sky scan for at least $\sim 25$ d each, each two years of TESS operations would yield at least $\sim 5$ localizable flares, which is consistent with the four flares detected by \citet{ilin2021b} because the majority of the five are expected in the fully convective M dwarf regime based on the distribution of rotation rates. 
 
-%Historically, stellar classes named after their prototypes, BY Dra and UV Ceti fall into this category, but others like RS CVn type stars and some T Tauri stars, may not, because their rotation periods are usually too low, even though they are actively flaring. Similarly, close and contact binary systems like UW UMa and Algol stars have entirely different physics going on, and FK Com stars are flaring giant branch stars that would require very long flare durations for flare localization to work without the star rotating at breakup velocities~\citep[see][for details on stellar activity in these prototype stars]{berdyugina2005}.
-\section{Implications of non-uniform flare distributions}
+
+\section{Implications of spatially non-uniform flare location distributions}
 \label{sec:implications}
 In the following sections, we discuss what opportunities and new questions locating flares on otherwise difficult to spatially resolve stellar surfaces opens up both for stellar and exoplanetary research.
 
 
 \subsection{Localize flares and active regions to understand stellar magnetic fields}\label{sec:mf}
 
-%\subsection{Missing link between small scale surface magnetic fields and global magnetic fields}
+The connection between small scale surface and global magnetic fields of low mass stars is poorly understood. Flares, and in particular large stellar superflares, are unique probes of both: They occupy a volume that spans a wide range of atmospheric heights, and they are highly localized on the stellar sphere. Observing a flare at a known location on the star illuminates the dynamics of the strong small-scale surface magnetic field, and in the case of large superflares, ties it to high altitudes in the corona~\citep{benz2010}.
 
-The connection between small scale surface and global magnetic fields of low mass stars is poorly understood. Flares, and in particular large stellar superflares, are unique probes of both because they occupy a volume that spans a wide range of atmospheric heights, and because it is highly localized on the stellar sphere. Observing a flare at a known location on the star illuminates the dynamics of the strong small-scale surface magnetic field, and in the case of large superflares, ties it to high altitudes in the corona.
+The triggering re-connection event is located in the corona, the subsequent energy release penetrates all layers of the stellar atmosphere through to the photospheric footpoints. Associated particle emission in the form of CMEs and energetic particle events (EP) will inevitably interact with the large scale field, which may confine, slow down, deflect or otherwise affect what eventually leaves the star along with the high energy radiation from the flare itself, which ultimately has an effect on the mass and angular momentum loss rates of the star~\citep{alvaradogomez2018,alvaradogomez2019,kay2019}. 
 
-The triggering re-connection event is located in the corona, the subsequent energy release penetrates all layers of the stellar atmosphere through to the photospheric footpoints. Associated particle emission in the form of coronal mass ejections (CME) and energetic particle events (EP) will inevitably interact with the large scale field, which may confine, slow down, deflect or otherwise affect what eventually leaves the star along with the high energy radiation from the flare itself, and can the arrive at the planets that revolve around it. 
-
-Prospectively, we can combine multi-band time series observations that reveal how different atmospheric strata are affected by a flare with measurements of its latitude and longitude to reconstruct the full three-dimensional time evolution of flares on stars other than the Sun. %Accurate models of stellar magnetic fields will have to be consistent with
+Prospectively, we can combine multi-wavelength time series observations that reveal how different atmospheric strata are affected by a flare~\citep{kowalski2013, maehara2021} with measurements of its latitude and longitude to reconstruct the full three-dimensional time evolution of flares on stars other than the Sun. 
 \subsection{Localize flares to understand the impact of stellar activity on habitable zone planets}\label{sec:planets}
 
-
-%Young M dwarfs are both interesting for transiting planet surveys and favorable targets for flare localization.
-
 In Section~\ref{sec:systematic}, we have seen that young M dwarfs are favorable targets for the localization of large flares on the stellar surface. 
-The same M dwarfs are of special interest in the context of habitability of exoplanets, because a. they are prime targets for transiting exoplanet surveys, b. their habitable zones are much closer to the star than in solar-type stars and c. they show high and persistent magnetic activity.
-In these stars, large flares and associated CMEs and EPs are able to alter and even evaporate the atmospheres of habitable zone planets.
+M dwarfs are of special interest in the context of habitability of exoplanets, because a. they are prime targets for transiting exoplanet surveys, b. their habitable zones are much closer to the star than in solar-type stars and c. they show high and persistent magnetic activity~\citep{shields2016}.
+In these stars, large flares, and associated CMEs and EPs can alter and even evaporate the atmospheres of habitable zone planets.
 
-Current models of atmospheric chemistry and evaporation do not take into account latitude distributions or assume solar ones. \citet{tilley2019} assume solar-like latitude distributions of flares, which is contrasted by observations that suggest that large flaring regions reside at much higher latitudes (Ilin+2021, Wolter2008).
+Current models of atmospheric chemistry and evaporation do not take into account latitude distributions or assume solar ones~\citet{tilley2019, chen2021}, which is contrasted by observations that suggest that large flaring regions reside at much higher latitudes than on the Sun~\citep{wolter2008,ilin2021b}.
 This is noteworthy because high latitude flares may have a different contribution to exoplanetary space weather than equatorial flares, especially CMEs and EPs.
 
-The analysis in Ilin+2021 suggests that the optically thick blackbody emission that arises from the photospheric footpoints is attenuated by $40-80\%$ at the planet when flares are placed closer to the poles than to the equator (assuming the star-planet system is spin-orbit aligned). But the energetic XUV emission, which is much more effective in altering the composition of or evaporating exoplanetary atmospheres (CITE), originates from a volume within the upper atmosphere of the star and tends to be optically thin so that the attenuation in the optical regime does not apply.
-%- While the optical emission from a flares carries the majority of the released energy during the event (Aschwanden something?), the wavelengths relevant to atmospheric chemistry and evaporation, i.e. X-ray and UV bands, are optically thin and not affected by geometrical foreshortening that causes the decreased impact in the optical.
-%- X-ray emission is known to be optically thin, but how much this is true in the UV regime depends on the atmospheric conditions of M dwarfs and is not fully understood. If UV radiation is optically thick, for instance in the biologically active near-UV regime, geometrical foreshortening may mitigate its impact or increase it in the case of misaligned systems.
- %   - While current observational constrains on UV flux are not affected by this on average, it may play a significant role in individual systems, pushing planets into or out of the habitable zone.
-  %  - Implicit in this is that HZ is not simply defined as based on the stellar irradiation as a function of orbital distance, but takes into account space weather effects like atmospheric chemistry and evaporation
-%- So we cannot extrapolate from the optical, also because the high-energy emission partly originates from the coronal loops at higher altitudes, and may be seen by the planet even if the footpoints are far behind the limb.
- %   - length of coronal loops in young stars have often been estimated as large as several times the stellar radius (e.g., Favata et al. 2005; McCleary and Wolk 2011; Hartmann et al. 2016; Reale et al. 2018).
-On the other hand, solar EPs and CMEs are ejected in a cone radially outward from the locus of the eruption. It is however, an open question to what degree this holds true for other stars, and in particular stars with strong large scale fields that are also the stars that produce the most intense flares.
-Models have shown that such strong fields can confine, slow down, deflect or fragment the emitted magnetized plasma~\citep{alvaradogomez2018, alvaradogomez2019, kay2019} (CITE). If flares, however, occurred closer to the poles, where the prefentially dipolar component of the magnetic field has the more open field lines, CMEs might escape more easily in the polar direction and leave a planet in the equatorial planet largely unaffected.
+Our analysis suggests that the optically thick blackbody emission that arises from the photospheric footpoints is attenuated by $40-80\%$ at the planet when flares are placed closer to the poles than to the equator~\citep[assuming the star-planet system is spin-orbit aligned,][]{ilin2021b}. However, it is the X-ray and UV emission, which is effective in altering the composition of or evaporating exoplanetary atmospheres, and affects biological life~\citep[see][and references therein]{airapetian2020}. It originates from a volume within the upper atmosphere of the star, and tends to be optically thin, so that the attenuation observed in the optical regime is not expected to occur.
+
+On the other hand, solar EPs and CMEs are ejected in a cone radially outward from the locus of eruption~\citep{fisher1984,xie2004}. It is, however, an open question to what degree this holds true for other stars, and in particular stars with strong large scale fields that are also the stars that produce the most intense flares. %xue2005, webb2000,
+Models have shown that such strong fields can confine, slow down, deflect and fragment the emitted magnetized plasma~\citep{alvaradogomez2018, alvaradogomez2019, kay2019}. If flares, however, occurred closer to the poles, where the prefentially dipolar component of the magnetic field has more open field lines, CMEs might escape more easily in the polar direction, and leave a planet in the equatorial plane largely unaffected. %\jdag{I think this reads very well Ekaterina.}
       
 %\subsection{Big unknown: spin-orbit alignment}
 If flaring regions preferentially reside at certain latitudes on the stellar surface, spin-orbit alignment becomes an important ingredient in the assessment of stellar space weather. 
 The above considerations assumed that the planet revolves around the rotational (and magnetic) equator of the star.
-However, although we expect this to be true for planets that form in the protoplanetary disk and are left undisturbed in this position after formation, the research on spin-orbit alignment is still in its infancy, especially for terrestrial planets around low mass M dwarfs.
+However, although we expect this to be true for planets that form in the protoplanetary disk and are left undisturbed in this position after formation, the research on spin-orbit alignment is still in its infancy, especially for terrestrial planets around low mass M dwarfs~\citep{mazeh2015,hirano2020,stefansson2020}.
 
 \section{Summary}\label{sec:summary}
 In the past, flares could only be located on the Sun directly, or by serendipitous discovery on a handful of stars. 
 Methods available for stellar (magnetic) surface mapping like spectropolarimetry work best on large, stable structures like long lived spots or coronal loops, but usually mask more dynamic, smaller scale processes like flares. 
-Using photometric time series, asteroseismolgy and spot migration modeling one can infer the latitudes of starspot groups that rotates at different surface speed of stars that exhibit differential rotation but the recovery of transient events like flares has yet to be demonstrated.
+Asteroseismology and light curve inversion can also be used, both in isolation and combined, to infer the latitudes of starspot groups. However, the recovery of transient events like flares has yet to be demonstrated with these techniques.
 
-With the rapid growth of long-term high cadence monitoring data of thousands of stars with Kepler, TESS and soon PLATO, systematic flare localization becomes observationally more accessible, in particular for young, rapidly rotating, low mass stars.
-The light curves of large gradual flares obtained by these missions are modulated as the flaring region rotates in and out of view on the stellar surface. The morphology of the modulation can be used to reveal the region's latitude and longitude.
+With the rapid accumulation of long-term high cadence monitoring data of thousands of stars with Kepler, TESS, and soon PLATO, systematic flare localization becomes observationally more accessible, in particular for young, rapidly rotating, low mass stars.
+The light curves of large, gradual flares obtained by these missions are modulated as the flaring region rotates in and out of view on the stellar surface. The morphology of the modulation can be used to directy infer the region's latitude and longitude.
 
-Localizing flares constrains models of stellar magnetic fields, and helps us understand the interplay between surface magnetic fields and the overlying large-scale fields. When combined with multi-band observations, the full spatio-temporal reconstruction of flares becomes a true possibility.
+Localizing flares constrains models of stellar magnetic fields, and helps us understand the interplay between surface magnetic fields and the overlying large-scale fields. When combined with multi-wavelength observations, the full spatio-temporal reconstruction of flares becomes a true possibility.
 
-Finally, we have seen that we need to know the locus of flares and associated CMEs and EPs to accurately estimate the impact of these events on planets in close orbits around active low mass stars. As a consequence, spin-orbit alignment, or its absense, emerges as one of the key star-planet system characteristics.
+Finally, we have seen that we need to know the locus of flares and associated CMEs and EPs to accurately estimate the impact of these events on planets in close orbits around active low mass stars. As a consequence, stellar obliquity emerges as one of the key star-planet system characteristics.
 
 %\backmatter
 
 \section*{Acknowledgments}
-We thank  Sebastian Pineda for helpful comments and discussion at he XMM-Workshop on CME escape.
+We thank Sebastian J. Pineda for helpful comments and discussion at he XMM-Workshop on CME escape.
 EI acknowledges support from the German National Scholarship Foundation. KP acknowledges support from the German Leibniz Community under grant P67/2018. We made use of numpy~\citep{numpy2020} and pandas~\citep{pandas2010,pandas2020software}.
 
-% This work was performed under the auspices of the \fundingAgency{National Nuclear Security Administration} of the US Department of Energy at Los Alamos National Laboratory under Contract No. \fundingNumber{DE-AC52-06NA25396} and supported. The authors acknowledge the partial support of the \fundingAgency{DOE Office of Science ASCR Program} under Contract No. \fundingNumber{SJS-AC52-06NA25968}. This work was partially supported by the \fundingAgency{Czech Technical University} grant \fundingNumber{SGS16/247/OHK4/3T/14}, the \fundingAgency{Czech Science Foundation} project \fundingNumber{14-21318S} and by the \fundingAgency{Czech Ministry of Education} project \fundingNumber{RVO 68407700}.
+
 
 \subsection*{Author contributions}
 
-This is an author contribution text. This is an author contribution text. This is an author contribution text.  
+All authors fulfil the criteria for authorship as stated in the AN Instructions for Authors. EI and KP were responsible for the design, the data analysis and interpretation in this work, and JDAG substantially contributed to the concept of the work, and the interpretation of the data.
 
-\subsection*{Financial disclosure}
-
-None reported.
-
+%\subsection*{Financial disclosure}
+%None reported.
 \subsection*{Conflict of interest}
-
 The authors declare no potential conflict of interests.
 
 \bibliography{flareloci}

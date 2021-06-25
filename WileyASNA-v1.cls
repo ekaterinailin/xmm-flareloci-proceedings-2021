@@ -631,7 +631,11 @@
 \def\copyyear#1{\gdef\copyyr{#1}}%
 \def\jyear#1{%%\gdef\copyyear{#1}
 \gdef\@jnlyear{#1}}%
-\def\doi#1{\gdef\@doi{#1}}%
+
+
+%\def\doi#1{\gdef\@doi{#1}}%
+\def\doi#1{\gdef\@doi{#1}{\href{http://dx.doi.org/#1}{#1}}}
+
 \def\pubname#1{\gdef\@pubname{#1}}%
 %%\def\arteditor#1{\gdef\@arteditor{\acadeditorfont Academic Editor:\ #1}}%
 %%\def\aceditor#1{\gdef\@arteditor{\acadeditorfont Academic Editor:\ #1}}%
@@ -2245,7 +2249,7 @@ Volume\ \@jvol, Article ID\ \@artid, \thepage~pages\par%
   \PackageWarning{natbib}{Empty `thebibliography' environment}%
  }%
  \endlist
- \printjnlcitation%
+ %\printjnlcitation%
  \bibcleanup
  %%\ifAQ\PutQueries\fi%
 \vspace*{-0pt}
@@ -2629,7 +2633,7 @@ Volume\ \@jvol, Article ID\ \@artid, \thepage~pages\par%
 \gdef\printjnlcitation{\removelastskip\vskip18pt\fboxsep=6pt\fboxrule=0.5pt%
 \hskip-\parindentvalue\fbox{\vbox{\noindent\@jnlcitation}}}%
 
-\AtEndDocument{\ifappendixsec\else\printjnlcitation\fi}%
+%\AtEndDocument{\ifappendixsec\else\printjnlcitation\fi}%
 
 %% Misc math macros %%
 
