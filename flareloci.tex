@@ -67,7 +67,8 @@ More recently, \citet{berdyugina2017} reconstructed a magnetic field loop that e
 
 The serendipity of these discoveries is due to the randomness of flare occurrence times, and the rarity of sufficiently gradual, large flares to which the analysis techniques were sensitive. 
 
-In Section~\ref{sec:howto}, we briefly review the methods available to infer the loci of flares on the stellar surface. We highlight a new direct method for systematic localization and estimate the number of flares suited for this technique in Section~\ref{sec:systematic}. In Section~\ref{sec:implications}, we discuss how flare loci help us understand the nature of stellar magnetic fields ~(Section~\ref{sec:mf}), and outline the implications for exoplanetary space weather~(Section~\ref{sec:planets}). We conclude with a short summary in Section~\ref{sec:summary}.
+%\jdag{Perhaps mention first what you did and then the rest? i.e. "Here we highlight a new direct method....  In Sec. 2 we briefly review... and introduce the generalities of our novel approach..." or something like this. Is just that it reads a bit odd that you describe what this proceeding is about in the middle of the paragraph and not at the start.}
+Here, we highlight a new direct method for the systematic localization of flares on the stellar surface. In Section~\ref{sec:howto}, we briefly review previous methods, introduce the generalities of our novel approach, and estimate the number of flares suited for this technique. In Section~\ref{sec:implications}, we discuss how flare loci help us understand the nature of stellar magnetic fields ~(Section~\ref{sec:mf}), and outline the implications for exoplanetary space weather~(Section~\ref{sec:planets}). We conclude with a short summary in Section~\ref{sec:summary}.
 
 \section{How to localize flares on the stellar surface}
 \label{sec:howto}
@@ -106,7 +107,7 @@ With the launch of Kepler~\citep{borucki2010} and the Transiting Exoplanet Surve
 We recovered four flares that lasted longer than a full rotation period on four fully convective M dwarfs.
 %, which has been observed on a few other stars in the past~\citep{skinner1997}.
 These flares' light curves were modulated as the flaring region rotated in and out of view on the fast spinning stellar surface~(Fig.~\ref{fig:ilin}). We found that all these \textit{flares occurred at latitudes closer to the rotational poles of the stars than to the equator}.
-Except for an independent measurement of the inclination of the stellar rotation axis -- required to disambiguate the latitude of the flaring region -- the light curve contained all necessary information to fully determine the location of the flare on the stellar surface.
+Except for an independent measurement of the inclination of the stellar rotation axis -- required to lift the latitude-inclination degeneracy of the flaring region -- the light curve contained all necessary information to fully determine the location of the flare on the stellar surface.
 As TESS, and soon PLATO~\citep{rauer2014}, will continue the high-cadence monitoring of flaring stars, this method can be applied to a steadily growing high quality data set.
 
 
@@ -131,11 +132,11 @@ In Fig.~\ref{fig:guenther}we show how often flares above a certain energy occur 
 
 %Therefore, most stars that rotate quickly due to their young age or due to binary interaction are candidates for flare localization. 
 Observations of young clusters show that stars are born with a wide distribution of stellar rotation rates, which widens further during the pre-main sequence contraction phase, reaching the highest rotation rates at zero-age main sequence~\citep[ZAMS,][and references therein]{johnstone2021}. %johnstone2015
-At Pleiades age (125 Myr, ZAMS), about $30\%$ of stars with spectral types later than F5 and earlier than M6 rotate at $P_{rot}<12$ h, more than $75\%$ of which are stars in the fully convective regime~\citep{rebull2016}. 
+At Pleiades age (125 Myr, ZAMS), about $30\%$ of stars with spectral types later than F5 and earlier than M6 rotate at $P_{rot}<12$~h, more than $75\%$ of which are stars in the fully convective regime~\citep{rebull2016}. 
 At Praesepe/Hyades age (600-800 Myr), the $P_{rot}<12$ h stars comprise only about $6\%$ of stars in that spectral regime, the fully convective stars still making up the majority of these~\citep{douglas2019}.
 Such fast rotators all reside in the saturated activity regime~\citep{wright2011,wright2018,newton2017}, and thus are expected to be actively flaring~\citep{doorsselaere2017, clarke2018}.%wright2016, %\jdag{The citation order is mixed up in the pdf. This weird format follows an alphabetical order irrespective of the year...}
 
-Assuming that the flaring stars in Fig.~\ref{fig:guenther} tend to be young, we can estimate that a similar fraction of these stars are rapidly rotating. For a conservative estimate we can assume $1\%$, a lower number than what we observe in the Pleiades, Praesepe and the Hyades. We can also take into account as a lower limit that about $1\%$ of stars are usually found flaring within 1 to 2 Sectors of observations~\citep{tu2021, guenther2020}. From the flare data in~\citet{guenther2020}, we obtain a lower order of magnitude estimate of $0.01$ flares per day with sufficiently large $FHWM$ (considering that flares in the corresponding energy range can also be more impulsive), which yields an approximate lower limit of $10^{-6}$ localizable flares per day, or one flare every $\sim2 700$ years of observations per star. This number is much lower than the estimate for the fully convective stars (one flare in 120 years), because these stars rotate faster and flare more persistently during their lifetimes than solar-type stars. However, since TESS observes $200\,000$ mostly FGKM stars per full sky scan for at least $\sim 25$ d each, each two years of TESS operations would yield at least $\sim 5$ localizable flares, which is consistent with the four flares detected by \citet{ilin2021b} because the majority of the five are expected in the fully convective M dwarf regime based on the distribution of rotation rates. 
+Assuming that the flaring stars in Fig.~\ref{fig:guenther} tend to be young, we can estimate that a similar fraction of these stars are rapidly rotating. For a conservative estimate we can assume $1\%$, a lower number than what we observe in the Pleiades, Praesepe and the Hyades. We can also take into account as a lower limit that about $1\%$ of stars are usually found flaring within 1 to 2 Sectors of observations~\citep{tu2021, guenther2020}. From the flare data in~\citet{guenther2020}, we obtain a lower order of magnitude estimate of $0.01$ flares per day with sufficiently large $FHWM$ (considering that flares in the corresponding energy range can also be more impulsive), which yields an approximate lower limit of $10^{-6}$ localizable flares per day, or one flare every $\sim2 700$ years of observations per star. This number is much lower than the estimate for the fully convective stars (one flare in 120 years), because these stars rotate faster and flare more persistently during their lifetimes than solar-type stars. However, since TESS observes $200\,000$ mostly FGKM stars per full sky scan for at least $\sim 25$~d each, each two years of TESS operations would yield at least $\sim 5$ localizable flares, which is consistent with the four flares detected by \citet{ilin2021b} because the majority of the five are expected in the fully convective M dwarf regime based on the distribution of rotation rates. 
 
 
 \section{Implications of spatially non-uniform flare location distributions}
@@ -186,8 +187,6 @@ Finally, we have seen that we need to know the locus of flares and associated CM
 \section*{Acknowledgments}
 We thank Sebastian J. Pineda for helpful comments and discussion at he XMM-Workshop on CME escape.
 EI acknowledges support from the German National Scholarship Foundation. KP acknowledges support from the German Leibniz Community under grant P67/2018. We made use of numpy~\citep{numpy2020} and pandas~\citep{pandas2010,pandas2020software}.
-
-
 
 \subsection*{Author contributions}
 
